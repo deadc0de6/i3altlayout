@@ -5,7 +5,7 @@
 
 # I3ALTLAYOUT
 
-`i3altlayout` help you handle more efficiently your screen real estate in i3wm
+`i3altlayout` helps you handle more efficiently your screen real estate in [i3wm](https://i3wm.org/)
 by auto-splitting windows on their longest side.
 
 If you open 4 windows, your workspace would look
@@ -37,7 +37,7 @@ sudo pip3 install i3altlayout
 
 # Usage
 
-Start the script directly with i3 by adding it to your config file
+Start the script directly with [i3](https://i3wm.org/) by adding it to your config file
 (usually under `~/.config/i3/config`):
 ```
 exec --no-startup-id "i3altlayout"
