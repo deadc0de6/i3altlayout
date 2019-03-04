@@ -20,7 +20,7 @@ setup(
     name='i3altlayout',
     version=VERSION,
 
-    description='i3wm automatic real estate',
+    description='i3wm efficient real estate',
     long_description=read_readme(readme),
     url='https://github.com/deadc0de6/i3altlayout',
     download_url = 'https://github.com/deadc0de6/i3altlayout/archive/v'+VERSION+'.tar.gz',
@@ -38,7 +38,7 @@ setup(
             'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
           ],
 
-    keywords='i3wm',
+    keywords='i3wm tiling',
     packages=find_packages(exclude=['tests*']),
     install_requires=['enum-compat', 'docopt', 'i3ipc'],
 
