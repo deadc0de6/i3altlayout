@@ -50,7 +50,7 @@ open a few windows.
 
 This project is similar to [i3-alternating-layout](https://github.com/olemartinorg/i3-alternating-layout)
 but uses the [i3ipc library](https://github.com/acrisci/i3ipc-python)
-instead of the unmaintained [i3-py module](https://github.com/ziberna/i3-py).
+instead of the unmaintained [i3-py library](https://github.com/ziberna/i3-py).
 
 # Contribution
 
