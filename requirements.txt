@@ -1,0 +1,2 @@
+enum-compat; python_version >= '3.0'
+i3ipc; python_version >= '3.0'
