@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/deadc0de6/i3altlayout.svg?branch=master)](https://travis-ci.org/deadc0de6/i3altlayout)
+[![PyPI version](https://badge.fury.io/py/i3altlayout.svg)](https://badge.fury.io/py/i3altlayout)
+[![Python](https://img.shields.io/pypi/pyversions/i3altlayout.svg)](https://pypi.python.org/pypi/i3altlayout)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 # I3ALTLAYOUT
@@ -24,17 +26,18 @@ If you open 4 windows, your workspace would look
 +-----------------------------------+        +---------------------------------+
 ```
 
+---
+
+**Table of Contents**
+
+* [Installation](#installation)
+* [Usage](#usage)
+
 # Installation
 
-Install the dependencies:
+Install the script from pypi
 ```bash
-$ sudo pip3 install -r requirements.txt
-```
-
-Then either copy the script `i3altlayout/i3altlayout.py` in your PATH or
-fully install the package with
-```bash
-$ sudo python3 setup.py install
+sudo pip3 install i3altlayout
 ```
 
 # Usage
@@ -42,14 +45,8 @@ $ sudo python3 setup.py install
 Start the script directly with i3 by adding it to your config file
 (usually under `~/.config/i3/config`):
 
-If installed with `setup.py`
 ```
 exec --no-startup-id "i3altlayout"
-```
-
-If installed as a standalone script
-```
-exec --no-startup-id "i3altlayout.py"
 ```
 
 # Related projects
