@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/deadc0de6/i3altlayout.svg?branch=master)](https://travis-ci.org/deadc0de6/i3altlayout)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
 # I3ALTLAYOUT
 
 This script allows to handles more efficiently your real estate in i3wm
