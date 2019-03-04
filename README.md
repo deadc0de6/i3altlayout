@@ -3,25 +3,25 @@
 
 # I3ALTLAYOUT
 
-This script allows to handles more efficiently your real estate in i3wm
+I3altlayout allows to handle more efficiently your screen real estate in i3wm
 by auto-splitting windows on their longest side.
 
 If you open 4 windows, your workspace would look
 
 ```
-       like this                                          instead of this
+             like this                               instead of this
 
-+-----------------------------------+              +---------------------------------+
-| +--------------+ +--------------+ |              | +-----+ +-----+ +-----+ +-----+ |
-| |              | |              | |              | |     | |     | |     | |     | |
-| |              | |      2       | |              | |     | |     | |     | |     | |
-| |              | |              | |              | |     | |     | |     | |     | |
-| |      1       | +--------------+ |              | |  1  | |  2  | |  3  | |  4  | |
-| |              | +--------------+ |              | |     | |     | |     | |     | |
-| |              | |      ||      | |              | |     | |     | |     | |     | |
-| |              | |   3  ||  4   | |              | |     | |     | |     | |     | |
-| +--------------+ +--------------+ |              | +-----+ +-----+ +-----+ +-----+ |
-+-----------------------------------+              +---------------------------------+
++-----------------------------------+        +---------------------------------+
+| +--------------+ +--------------+ |        | +-----+ +-----+ +-----+ +-----+ |
+| |              | |              | |        | |     | |     | |     | |     | |
+| |              | |      2       | |        | |     | |     | |     | |     | |
+| |              | |              | |        | |     | |     | |     | |     | |
+| |      1       | +--------------+ |        | |  1  | |  2  | |  3  | |  4  | |
+| |              | +--------------+ |        | |     | |     | |     | |     | |
+| |              | |      ||      | |        | |     | |     | |     | |     | |
+| |              | |   3  ||  4   | |        | |     | |     | |     | |     | |
+| +--------------+ +--------------+ |        | +-----+ +-----+ +-----+ +-----+ |
++-----------------------------------+        +---------------------------------+
 ```
 
 # Installation
@@ -60,7 +60,7 @@ instead of the unmaintained [i3-py module](https://github.com/ziberna/i3-py).
 
 # Contribution
 
-If you are having trouble installing or using dotdrop, open an issue.
+If you are having trouble installing or using i3altlayout, open an issue.
 
 If you want to contribute, feel free to do a PR (please follow PEP8).
 
