@@ -4,7 +4,7 @@
 """
 author: deadc0de6 (https://github.com/deadc0de6)
 Copyright (c) 2019, deadc0de6
-i3 alternating layout
+i3wm efficient screen real estate
 """
 
 import sys
