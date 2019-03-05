@@ -32,7 +32,21 @@ If you open 4 windows, your workspace would look
 
 Install the script from [pypi](https://pypi.org/project/i3altlayout/)
 ```bash
-sudo pip3 install i3altlayout
+$ sudo pip3 install i3altlayout
+```
+
+## Offline installation
+
+from the online host, run the following
+```bash
+$ mkdir -p /tmp/i3altlayout && pip3 download -d /tmp/i3altlayout i3altlayout
+```
+
+Then compress the directory `/tmp/i3altlayout` and transfer it to the offline host.
+
+In the offline host, with the decompressed i3altlayout directory in `/tmp/i3altlayout`, run the following:
+```bash
+$ pip3 install --no-index --find-links=/tmp/i3altlayout i3altlayout
 ```
 
 # Usage
