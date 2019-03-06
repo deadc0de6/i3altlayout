@@ -46,7 +46,7 @@ Then compress the directory `/tmp/i3altlayout` and transfer it to the offline ho
 
 In the offline host, with the decompressed i3altlayout directory in `/tmp/i3altlayout`, run the following:
 ```bash
-$ pip3 install --no-index --find-links=/tmp/i3altlayout i3altlayout
+$ sudo pip3 install --no-index --find-links=/tmp/i3altlayout i3altlayout
 ```
 
 # Usage
