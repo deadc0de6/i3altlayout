@@ -56,10 +56,18 @@ def on_window_focus(i3, event):
     width = window.rect.width
     log('height: {}, width: {}'.format(height, width))
 
-    if height > width:
+    """aspect ratio rule BUT always split vertical if the screen is portrait.
+       Rationale: it's uncommon to have applications that work well on very tiny width"""
+    workspace_height = window.workspace().rect.height
+    workspace_width = window.workspace().rect.width
+    if workspace_height > workspace_width:
         layout = 'vertical'
     else:
-        layout = 'horizontal'
+        if height > width:
+            layout = 'vertical'
+        else:
+            layout = 'horizontal'
+
     cmd = 'split {}'.format(layout)
     log('running command: {}'.format(cmd))
     i3.command(cmd)
