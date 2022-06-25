@@ -43,9 +43,7 @@ the [i3altlayout.py file](/i3altlayout/i3altlayout.py):
 * i3ipc (`python3-i3ipc` on debian/fedora)
 * docopt (`python3-docopt` on debian/fedora)
 
-Or package the pypi package as shown below:
-
-From the online host, run the following
+Or package the pypi package:
 ```bash
 ## on online host
 $ mkdir -p /tmp/i3altlayout && pip3 download -d /tmp/i3altlayout i3altlayout
