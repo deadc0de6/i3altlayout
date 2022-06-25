@@ -42,7 +42,7 @@ setup(
 
     keywords='i3wm tiling',
     packages=find_packages(exclude=['tests*']),
-    install_requires=['enum-compat', 'docopt', 'i3ipc'],
+    install_requires=['docopt', 'i3ipc'],
 
     extras_require={
         'dev': ['check-manifest'],
