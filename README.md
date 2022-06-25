@@ -37,15 +37,22 @@ $ sudo pip3 install i3altlayout
 
 ## Offline installation
 
-from the online host, run the following
+Either install the dependencies and copy
+the [i3altlayout.py file](/i3altlayout/i3altlayout.py):
+
+* i3ipc (`python3-i3ipc` on debian/fedora)
+* docopt (`python3-docopt` on debian/fedora)
+
+Or package the pypi package as shown below:
+
+From the online host, run the following
 ```bash
+## on online host
 $ mkdir -p /tmp/i3altlayout && pip3 download -d /tmp/i3altlayout i3altlayout
-```
 
-Then compress the directory `/tmp/i3altlayout` and transfer it to the offline host.
+## move the /tmp/i3altlayout directory to the offline host
 
-In the offline host, with the decompressed i3altlayout directory in `/tmp/i3altlayout`, run the following:
-```bash
+## on offline host
 $ sudo pip3 install --no-index --find-links=/tmp/i3altlayout i3altlayout
 ```
 
