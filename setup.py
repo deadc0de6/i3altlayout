@@ -16,7 +16,7 @@ setup(
 
     description='i3wm efficient real estate',
     long_description=read_readme(readme),
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     license_files = ('LICENSE',),
     url='https://github.com/deadc0de6/i3altlayout',
     download_url = 'https://github.com/deadc0de6/i3altlayout/archive/v'+VERSION+'.tar.gz',
