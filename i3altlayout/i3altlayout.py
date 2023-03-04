@@ -14,7 +14,7 @@ from docopt import docopt
 
 
 NAME = 'i3altlayout'
-VERSION = '1.1.1'
+VERSION = '1.1.2'
 DEBUG = False
 USAGE = f"""
 {NAME}
