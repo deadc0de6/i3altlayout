@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # author: deadc0de6
-#
-# pylint: disable=E0012
 
 """
 author: deadc0de6 (https://github.com/deadc0de6)

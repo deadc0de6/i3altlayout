@@ -10,5 +10,9 @@ pycodestyle setup.py
 pyflakes i3altlayout/
 pyflakes setup.py
 
-pylint i3altlayout/
-pylint i3altlayout/
+pylint \
+  --disable=E0012 \
+  i3altlayout/
+pylint \
+  --disable=E0012 \
+  i3altlayout/
