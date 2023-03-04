@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # author: deadc0de6
+#
+# pylint: disable=E0012
 
 """
 author: deadc0de6 (https://github.com/deadc0de6)
@@ -90,7 +92,7 @@ def main(spath, ppath):
 
     try:
         i3vm = i3ipc.Connection(socket_path=spath)
-    except Exception as exc:  # pylint: disable=W0718
+    except Exception as exc:  # pylint: disable=W0718,W0703
         print(exc)
         return False
     i3vm.on('window::focus', on_window_focus)
