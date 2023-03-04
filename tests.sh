@@ -5,4 +5,10 @@
 set -ev
 
 pycodestyle i3altlayout/
+pycodestyle setup.py
+
 pyflakes i3altlayout/
+pyflakes setup.py
+
+pylint i3altlayout/
+pylint i3altlayout/
