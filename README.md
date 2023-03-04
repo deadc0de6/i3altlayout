@@ -1,4 +1,4 @@
-[![Tests Status](https://github.com/deadc0de6/i3altlayout/workflows/tests/badge.svg)](https://github.com/deadc0de6/i3altlayout/actions)
+[![Build Status](https://github.com/deadc0de6/i3altlayout/workflows/tests/badge.svg)](https://github.com/deadc0de6/i3altlayout/actions)
 [![PyPI version](https://badge.fury.io/py/i3altlayout.svg)](https://badge.fury.io/py/i3altlayout)
 [![Python](https://img.shields.io/pypi/pyversions/i3altlayout.svg)](https://pypi.python.org/pypi/i3altlayout)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
