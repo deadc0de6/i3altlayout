@@ -16,13 +16,13 @@ from docopt import docopt
 NAME = 'i3altlayout'
 VERSION = '1.1.1'
 DEBUG = False
-USAGE = """
-{0}
+USAGE = f"""
+{NAME}
 
 Usage:
-    {1} [-d] [--pid=<path>] [--socket=<path>]
-    {1} --help
-    {1} --version
+    {NAME} [-d] [--pid=<path>] [--socket=<path>]
+    {NAME} --help
+    {NAME} --version
 
 Options:
     -d --debug          Enable debug logs.
@@ -30,20 +30,20 @@ Options:
     -s --socket=<path>  i3 socket path.
     -v --version        Show version.
     -h --help           Show this screen.
-""".format(NAME, NAME)
+"""
 
 
 def log(string):
     """write logs to stderr"""
     if not DEBUG:
         return
-    sys.stderr.write('{}\n'.format(string))
+    sys.stderr.write(f'{string}\n')
 
 
-def on_window_focus(i3, event):
+def on_window_focus(i3vm, _event):
     """split depending on window size"""
-    window = i3.get_tree().find_focused()
-    log('new focused window: {}'.format(window))
+    window = i3vm.get_tree().find_focused()
+    log(f'new focused window: {window}')
     if not window:
         return
     if not window.rect:
@@ -54,13 +54,11 @@ def on_window_focus(i3, event):
 
     height = window.rect.height
     width = window.rect.width
-    log('height: {}, width: {}'.format(height, width))
+    log(f'height: {height}, width: {width}')
 
-    """
-    aspect ratio rule BUT always split vertical if the screen is portrait.
-    Rationale: it's uncommon to have applications that
-               work well on very tiny width
-    """
+    # aspect ratio rule BUT always split vertical if the screen is portrait.
+    # Rationale: it's uncommon to have applications that
+    #            work well on very tiny width
     workspace_height = window.workspace().rect.height
     workspace_width = window.workspace().rect.width
     if workspace_height > workspace_width:
@@ -71,9 +69,9 @@ def on_window_focus(i3, event):
         else:
             layout = 'horizontal'
 
-    cmd = 'split {}'.format(layout)
-    log('running command: {}'.format(cmd))
-    i3.command(cmd)
+    cmd = f'split {layout}'
+    log(f'running command: {cmd}')
+    i3vm.command(cmd)
     log('\n')
 
 
@@ -82,34 +80,32 @@ def write_pid(path):
     if not path:
         return
     pid = str(os.getpid())
-    with open(path, 'w') as f:
-        f.write(pid)
+    with open(path, 'w', encoding='utf-8') as file:
+        file.write(pid)
 
 
-def main():
+def main(spath, ppath):
     """entry point"""
-    args = docopt(USAGE, version=VERSION)
-    global DEBUG
-    DEBUG = args['--debug']
-    spath = args['--socket']
-    ppath = args['--pid']
-
     write_pid(ppath)
 
     try:
-        i3 = i3ipc.Connection(socket_path=spath)
-    except Exception as e:
-        print(e)
+        i3vm = i3ipc.Connection(socket_path=spath)
+    except Exception as exc:  # pylint: disable=W0718
+        print(exc)
         return False
-    i3.on('window::focus', on_window_focus)
+    i3vm.on('window::focus', on_window_focus)
     try:
-        i3.main()
+        i3vm.main()
     except KeyboardInterrupt:
         pass
     return True
 
 
 if __name__ == "__main__":
-    if main():
+    args = docopt(USAGE, version=VERSION)
+    DEBUG = args['--debug']
+    socket_path = args['--socket']
+    pid_path = args['--pid']
+    if main(socket_path, pid_path):
         sys.exit(0)
     sys.exit(1)
