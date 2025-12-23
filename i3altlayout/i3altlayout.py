@@ -102,10 +102,15 @@ def main(spath, ppath):
 
 
 if __name__ == "__main__":
-    args = docopt(USAGE, version=VERSION)
-    DEBUG = args['--debug']
-    socket_path = args['--socket']
-    pid_path = args['--pid']
-    if main(socket_path, pid_path):
-        sys.exit(0)
-    sys.exit(1)
+    def cli():
+        """command-line entry point"""
+        args = docopt(USAGE, version=VERSION)
+        global DEBUG
+        DEBUG = args['--debug']
+        socket_path = args['--socket']
+        pid_path = args['--pid']
+        if main(socket_path, pid_path):
+            sys.exit(0)
+        sys.exit(1)
+
+    cli()

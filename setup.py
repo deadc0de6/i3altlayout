@@ -56,7 +56,7 @@ setup(
 
     entry_points={
           'console_scripts': [
-                'i3altlayout=i3altlayout.i3altlayout:main',
+                'i3altlayout=i3altlayout.i3altlayout:cli',
                 ],
           },
 )
