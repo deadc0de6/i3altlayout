@@ -9,13 +9,14 @@ i3wm efficient screen real estate
 
 import sys
 import os
-import i3ipc
-from docopt import docopt
+import logging
+import i3ipc  # pylint: disable=E0401
+from docopt import docopt  # pylint: disable=E0401
 
 
 NAME = 'i3altlayout'
 VERSION = '1.1.2'
-DEBUG = False
+logger = logging.getLogger(__name__)
 USAGE = f"""
 {NAME}
 
@@ -35,9 +36,7 @@ Options:
 
 def log(string):
     """write logs to stderr"""
-    if not DEBUG:
-        return
-    sys.stderr.write(f'{string}\n')
+    logger.debug(string)
 
 
 def on_window_focus(i3vm, _event):
@@ -105,8 +104,9 @@ if __name__ == "__main__":
     def cli():
         """command-line entry point"""
         args = docopt(USAGE, version=VERSION)
-        global DEBUG
-        DEBUG = args['--debug']
+        if args['--debug']:
+            logging.basicConfig(level=logging.DEBUG)
+            logger.setLevel(logging.DEBUG)
         socket_path = args['--socket']
         pid_path = args['--pid']
         if main(socket_path, pid_path):
