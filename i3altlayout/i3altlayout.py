@@ -15,7 +15,7 @@ from docopt import docopt  # pylint: disable=E0401
 
 
 NAME = 'i3altlayout'
-VERSION = '1.1.3'
+VERSION = '1.1.4'
 logger = logging.getLogger(__name__)
 USAGE = f"""
 {NAME}
